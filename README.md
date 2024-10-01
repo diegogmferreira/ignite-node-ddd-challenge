@@ -28,3 +28,17 @@ Dado o diálogo acima, você deve conseguir responder as seguintes perguntas:
 
 - Quais as entidades de domínio?
 - Quais as ações (casos de uso) que essa aplicação deve ter?
+
+domain
+- produto
+- estoque
+- ordem de compra
+- vendas
+
+use-cases
+- rastrear produtos
+- definir quantidades mínimas de estoque
+- receber alertas quando estivermos ficando sem um determinado produto (email e notificação)
+- visualizar histórico de vendas e estoque
+- criar e gerenciar ordens de compra automaticamente
+- integrar o sistema com fornecedores
