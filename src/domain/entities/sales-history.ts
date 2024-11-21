@@ -3,7 +3,8 @@ import { UniqueEntityID } from "@/core/entities/unique-entity";
 
 interface Props {
   productId: string;
-  qtd: number;
+  qtdSold: number;
+  salePricePerUnit: number;
   profit: number;
   createdAt: Date;
 }

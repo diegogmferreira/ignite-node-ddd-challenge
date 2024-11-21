@@ -1,5 +1,6 @@
 import { Entity } from "@/core/entities/entity";
 import { UniqueEntityID } from "@/core/entities/unique-entity";
+import type { Optional } from "@/core/types/optional";
 
 enum StockMovementType {
   ENTRIES = 'entries',
@@ -14,8 +15,11 @@ interface Props {
 }
 
 export class StockMovement extends Entity<Props> {
-  static create(props: Props, id?: UniqueEntityID) {
-    const stockMovement = new StockMovement(props, id);
+  static create(props: Optional<Props, 'createdAt'>, id?: UniqueEntityID) {
+    const stockMovement = new StockMovement({
+      ...props,
+      createdAt: new Date(),
+    }, id);
     return stockMovement;
   }
 }
