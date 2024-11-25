@@ -92,33 +92,4 @@ export class Product extends Entity<Props> {
   static findById(id: UniqueEntityID, props: Props) {
     return new Product(props, id)
   }
-
-  update(updates: Partial<Omit<Props, 'createdAt' | 'updatedAt'>>): void {
-    if (updates.name) {
-      this.props.name = updates.name;
-    }
-    if (updates.size) {
-      this.props.size = updates.size;
-    }
-    if (updates.color) {
-      this.props.color = updates.color;
-    }
-    if (updates.sellingPrice !== undefined) {
-      this.props.sellingPrice = updates.sellingPrice;
-    }
-    if (updates.costPrice !== undefined) {
-      this.props.costPrice = updates.costPrice;
-    }
-    if (updates.qtd !== undefined) {
-      this.props.qtd = updates.qtd;
-    }
-    if (updates.minStockQtd !== undefined) {
-      this.props.minStockQtd = updates.minStockQtd;
-    }
-    if (updates.supplierIds) {
-      this.props.supplierIds = updates.supplierIds;
-    }
-
-    this.touch(); // Update the `updatedAt` timestamp
-  }
 }

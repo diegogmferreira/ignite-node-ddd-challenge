@@ -34,6 +34,7 @@ domain
 - estoque
 - ordem de compra
 - vendas
+- alerta
 
 use-cases
 - rastrear produtos
